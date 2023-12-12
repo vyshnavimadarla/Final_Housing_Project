@@ -39,5 +39,31 @@ Two regression models were chosen for experimentation: Linear Regression and Dec
 These models serve as initial candidates for predicting housing prices based on the dataset's features.
 
 # Hyperparameter tuning 
+The step utilizes GridSearchCV to perform hyperparameter tuning for Linear Regression and Decision 
+Tree Regressor. It defines hyperparameter grids for each model, iterates through the models, and 
+identifies the best parameters through cross-validated search. The best models are then used to make 
+predictions on the test set, and the Mean Squared Error is calculated for evaluation. Finally, the best 
+hyperparameters and model performance metrics are printed for both Linear Regression and Decision 
+Tree Regressor. The code encapsulates a comprehensive hyperparameter optimization process for 
+regression models.
 
+# Pickle Files
+This step trains a Decision Tree Regressor on housing data, splits it into training and testing sets, and 
+evaluates performance using Mean Squared Error. The trained model is then saved as a pickle file named 
+'Decision_Tree_Regressor_model.pkl.' The code encapsulates model training, evaluation, and persistence 
+for future use.
+
+# Model Deployment
+The provided code trains a Decision Tree Regressor on housing data, saves the model as a pickle file, and 
+deploys an interactive dashboard using Panel for users to explore model predictions and evaluation 
+metrics. The deployment includes creating a user-friendly interface with input widgets, integrating the 
+saved model into the Panel app, and launching an interactive dashboard for users to interact with the 
+deployed Decision Tree Regressor model.
+
+# Prediction
+A function was created to take a new review as input, preprocess it, and predict its sentiment 
+using the deployed model. The project successfully conducted sentiment analysis on food reviews,
+providing insightsinto the sentiment distribution, frequently used words, and review patterns over
+time. The Logistic Regression model demonstrated reliable performance in classifying
+sentiments, and the deploymentpipeline allows for real time predictions on new reviews.
 
